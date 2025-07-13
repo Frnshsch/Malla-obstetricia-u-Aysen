@@ -1,40 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const ramos = document.querySelectorAll('.ramo');
 
-  // Función para activar o desactivar ramos
-  checkboxes.forEach(function (checkbox) {
-    checkbox.addEventListener('change', function () {
-      const ramoId = this.id;
-      const ramo = document.querySelector(`.ramo[data-id="${ramoId}"]`);
-      const dependencias = ramo.dataset.depends.split(',');
+  // Inicializa el estado de los ramos según dependencias
+  actualizarEstado();
 
-      if (this.checked) {
-        // Marcar ramo como aprobado y habilitar dependencias
-        enableDependencias(dependencias);
-      } else {
-        // Si no está aprobado, deshabilitar dependencias
-        disableDependencias(dependencias);
-      }
-    });
+  // Agrega evento a cada checkbox
+  ramos.forEach(ramo => {
+    const checkbox = ramo.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', actualizarEstado);
   });
 
-  // Habilitar ramos dependientes
-  function enableDependencias(dependencias) {
-    dependencias.forEach(function (dep) {
-      const depCheckbox = document.getElementById(dep);
-      if (depCheckbox && !depCheckbox.checked) {
-        depCheckbox.disabled = false;
+  function actualizarEstado() {
+    ramos.forEach(ramo => {
+      const checkbox = ramo.querySelector('input[type="checkbox"]');
+      const dependeDe = ramo.dataset.depends.split(',').filter(id => id);
+      
+      if (dependeDe.length === 0) {
+        checkbox.disabled = false; // No depende de nadie
+        return;
       }
-    });
-  }
 
-  // Deshabilitar ramos dependientes
-  function disableDependencias(dependencias) {
-    dependencias.forEach(function (dep) {
-      const depCheckbox = document.getElementById(dep);
-      if (depCheckbox && !depCheckbox.checked) {
-        depCheckbox.disabled = true;
-      }
+      // Verifica si todos los ramos de los que depende están marcados
+      const todosAprobados = dependeDe.every(id => {
+        const prerequisito = document.getElementById(id);
+        return prerequisito && prerequisito.checked;
+      });
+
+      checkbox.disabled = !todosAprobados;
     });
   }
 });
