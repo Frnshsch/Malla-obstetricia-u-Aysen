@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f0;
+  color: #800000;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #b30000;
+}
+
+h2 {
+  color: #a00000;
+  border-bottom: 2px solid #b30000;
+  padding-bottom: 4px;
+  margin-top: 30px;
+}
+
+.ramo {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #d00000;
+  border-radius: 5px;
+  background-color: #ffe6e6;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: gray;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #ccc;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
