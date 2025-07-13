@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Obstetricia</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Malla Interactiva - Obstetricia UAysén</h1>
+ <h2>Año 1 - Semestre I</h2>
+  <div class="ramo" data-id="fundamentos1" data-depends="">
+    <input type="checkbox" id="fundamentos1" />
+    <label for="fundamentos1">Fundamentos disciplinarios de la profesión</label>
+  </div>
+  <div class="ramo" data-id="quimica" data-depends="">
+    <input type="checkbox" id="quimica" />
+    <label for="quimica">Química y bioquímica</label>
+  </div>
+  <div class="ramo" data-id="anatomia" data-depends="">
+    <input type="checkbox" id="anatomia" />
+    <label for="anatomia">Anatomía</label>
+  </div>
+  <div class="ramo" data-id="sociocultural" data-depends="">
+    <input type="checkbox" id="sociocultural" />
+    <label for="sociocultural">Fundamentos socioculturales de la salud</label>
+  </div>
+  <div class="ramo" data-id="formacion1" data-depends="">
+    <input type="checkbox" id="formacion1" />
+    <label for="formacion1">Formación fundamental I</label>
+  </div>
+  <div class="ramo" data-id="herramientas" data-depends="">
+    <input type="checkbox" id="herramientas" />
+    <label for="herramientas">Herramientas informáticas</label>
+  </div>
+ <h2>Año 1 - Semestre II</h2>
+  <div class="ramo" data-id="salud1" data-depends="fundamentos1,quimica,anatomia">
+    <input type="checkbox" id="salud1" disabled />
+    <label for="salud1">Salud de la mujer y recién nacido I</label>
+  </div>
+  <div class="ramo" data-id="biologia" data-depends="quimica">
+    <input type="checkbox" id="biologia" disabled />
+    <label for="biologia">Biología celular y genética</label>
+  </div>
+  <div class="ramo" data-id="fisiologia" data-depends="anatomia">
+    <input type="checkbox" id="fisiologia" disabled />
+    <label for="fisiologia">Fisiología general y de sistemas</label>
+  </div>
+  <div class="ramo" data-id="histologia" data-depends="fisiologia">
+    <input type="checkbox" id="histologia" disabled />
+    <label for="histologia">Histología</label>
+  </div>
+  <div class="ramo" data-id="formacion2" data-depends="formacion1">
+    <input type="checkbox" id="formacion2" disabled />
+    <label for="formacion2">Formación fundamental II</label>
+  </div>
+ <h2>Año 2 - Semestre III</h2>
+  <div class="ramo" data-id="salud2" data-depends="salud1">
+    <input type="checkbox" id="salud2" disabled />
+    <label for="salud2">Salud de la mujer y recién nacido II</label>
+  </div>
+  <div class="ramo" data-id="inmunologia" data-depends="biologia">
+    <input type="checkbox" id="inmunologia" disabled />
+    <label for="inmunologia">Inmunología y agentes vivos</label>
+  </div>
+  <div class="ramo" data-id="fisiopatologia" data-depends="biologia,fisiologia">
+    <input type="checkbox" id="fisiopatologia" disabled />
+    <label for="fisiopatologia">Fisiopatología</label>
+  </div>
+  <div class="ramo" data-id="psicologia" data-depends="">
+    <input type="checkbox" id="psicologia" />
+    <label for="psicologia">Psicología general y del desarrollo</label>
+  </div>
+  <div class="ramo" data-id="ingles1" data-depends="">
+    <input type="checkbox" id="ingles1" />
+    <label for="ingles1">Inglés I</label>
+  </div>
+ <h2>Año 2 - Semestre IV</h2>
+  <div class="ramo" data-id="salud3" data-depends="salud2">
+    <input type="checkbox" id="salud3" disabled />
+    <label for="salud3">Salud de la mujer y recién nacido III</label>
+  </div>
+  <div class="ramo" data-id="educacion" data-depends="sociocultural">
+    <input type="checkbox" id="educacion" disabled />
+    <label for="educacion">Educación para la salud e interculturalidad</label>
+  </div>
+  <div class="ramo" data-id="farmacologia" data-depends="fisiopatologia">
+    <input type="checkbox" id="farmacologia" disabled />
+    <label for="farmacologia">Farmacología</label>
+  </div>
+  <div class="ramo" data-id="epidemiologia1" data-depends="">
+    <input type="checkbox" id="epidemiologia1" />
+    <label for="epidemiologia1">Salud pública y epidemiología I</label>
+  </div>
+  <div class="ramo" data-id="ingles2" data-depends="ingles1">
+    <input type="checkbox" id="ingles2" disabled />
+    <label for="ingles2">Inglés II</label>
+  </div>
+ <h2>Año 3 - Semestre V</h2>
+  <div class="ramo" data-id="clinica1" data-depends="salud3,farmacologia">
+    <input type="checkbox" id="clinica1" disabled />
+    <label for="clinica1">Clínica salud de la mujer y recién nacido I</label>
+  </div>
+  <div class="ramo" data-id="gestion1" data-depends="epidemiologia1">
+    <input type="checkbox" id="gestion1" disabled />
+    <label for="gestion1">Gestión y liderazgo en salud I</label>
+  </div>
+  <div class="ramo" data-id="epidemiologia2" data-depends="epidemiologia1">
+    <input type="checkbox" id="epidemiologia2" disabled />
+    <label for="epidemiologia2">Salud pública y epidemiología II</label>
+  </div>
+  <div class="ramo" data-id="electivo1" data-depends="">
+    <input type="checkbox" id="electivo1" />
+    <label for="electivo1">Electivo I</label>
+  </div>
+  <div class="ramo" data-id="ingles3" data-depends="ingles2">
+    <input type="checkbox" id="ingles3" disabled />
+    <label for="ingles3">Inglés III</label>
+  </div>
+ <h2>Año 3 - Semestre VI</h2>
+  <div class="ramo" data-id="salud4" data-depends="clinica1">
+    <input type="checkbox" id="salud4" disabled />
+    <label for="salud4">Salud de la mujer y recién nacido IV</label>
+  </div>
+  <div class="ramo" data-id="gestion2" data-depends="gestion1">
+    <input type="checkbox" id="gestion2" disabled />
+    <label for="gestion2">Gestión y liderazgo en salud II</label>
+  </div>
+  <div class="ramo" data-id="investigacion1" data-depends="epidemiologia2">
+    <input type="checkbox" id="investigacion1" disabled />
+    <label for="investigacion1">Investigación en salud I</label>
+  </div>
+  <div class="ramo" data-id="ingles4" data-depends="ingles3">
+    <input type="checkbox" id="ingles4" disabled />
+    <label for="ingles4">Inglés IV</label>
+  </div>
+ <h2>Año 4 - Semestre VII</h2>
+  <div class="ramo" data-id="salud5" data-depends="salud4">
+    <input type="checkbox" id="salud5" disabled />
+    <label for="salud5">Salud de la mujer y recién nacido V</label>
+  </div>
+  <div class="ramo" data-id="gestion3" data-depends="gestion2">
+    <input type="checkbox" id="gestion3" disabled />
+    <label for="gestion3">Gestión y liderazgo en salud III</label>
+  </div>
+  <div class="ramo" data-id="investigacion2" data-depends="investigacion1">
+    <input type="checkbox" id="investigacion2" disabled />
+    <label for="investigacion2">Investigación en salud II</label>
+  </div>
+  <div class="ramo" data-id="bioetica" data-depends="">
+    <input type="checkbox" id="bioetica" />
+    <label for="bioetica">Bioética clínica</label>
+  </div>
+  <div class="ramo" data-id="formacion3" data-depends="formacion2">
+    <input type="checkbox" id="formacion3" disabled />
+    <label for="formacion3">Formación fundamental III</label>
+  </div>
+  <div class="ramo" data-id="electivo2" data-depends="">
+    <input type="checkbox" id="electivo2" />
+    <label for="electivo2">Electivo II</label>
+  </div>
+ <h2>Año 4 - Semestre VIII</h2>
+  <div class="ramo" data-id="clinica2" data-depends="salud5,gestion3">
+    <input type="checkbox" id="clinica2" disabled />
+    <label for="clinica2">Clínica salud de la mujer y recién nacido II: APS</label>
+  </div>
+  <div class="ramo" data-id="clinica3" data-depends="salud5,gestion3">
+    <input type="checkbox" id="clinica3" disabled />
+    <label for="clinica3">Clínica salud de la mujer y recién nacido III: Intrahospitalaria</label>
+  </div>
+  <div class="ramo" data-id="formulacion" data-depends="gestion3,investigacion2">
+    <input type="checkbox" id="formulacion" disabled />
+    <label for="formulacion">Formulación y evaluación de proyectos en salud</label>
+  </div>
+  <div class="ramo" data-id="electivo3" data-depends="">
+    <input type="checkbox" id="electivo3" />
+    <label for="electivo3">Electivo III</label>
+  </div>
+  <div class="ramo" data-id="formacion4" data-depends="formacion3">
+    <input type="checkbox" id="formacion4" disabled />
+    <label for="formacion4">Formación fundamental IV</label>
+  </div>
+ <h2>Año 5 - Semestre IX</h2>
+  <div class="ramo" data-id="internado_obs1" data-depends="clinica2,clinica3,formulacion,bioetica">
+    <input type="checkbox" id="internado_obs1" disabled />
+    <label for="internado_obs1">Internado Obstetricia I</label>
+  </div>
+  <div class="ramo" data-id="internado_aps1" data-depends="clinica2,clinica3,formulacion,bioetica">
+    <input type="checkbox" id="internado_aps1" disabled />
+    <label for="internado_aps1">Internado APS I</label>
+  </div>
+  <div class="ramo" data-id="internado_gine1" data-depends="clinica2,clinica3,formulacion,bioetica">
+    <input type="checkbox" id="internado_gine1" disabled />
+    <label for="internado_gine1">Internado Ginecología I</label>
+  </div>
+  <div class="ramo" data-id="internado_neo1" data-depends="clinica2,clinica3,formulacion,bioetica">
+    <input type="checkbox" id="internado_neo1" disabled />
+    <label for="internado_neo1">Internado Neonatología I</label>
+  </div>
+ <h2>Año 5 - Semestre X</h2>
+  <div class="ramo" data-id="internado_obs2" data-depends="internado_obs1">
+    <input type="checkbox" id="internado_obs2" disabled />
+    <label for="internado_obs2">Internado Obstetricia II</label>
+  </div>
+  <div class="ramo" data-id="internado_aps2" data-depends="internado_aps1">
+    <input type="checkbox" id="internado_aps2" disabled />
+    <label for="internado_aps2">Internado APS II</label>
+  </div>
+  <div class="ramo" data-id="internado_gine2" data-depends="internado_gine1">
+    <input type="checkbox" id="internado_gine2" disabled />
+    <label for="internado_gine2">Internado Ginecología II</label>
+  </div>
+  <div class="ramo" data-id="internado_neo2" data-depends="internado_neo1">
+    <input type="checkbox" id="internado_neo2" disabled />
+    <label for="internado_neo2">Internado Neonatología II</label>
+  </div>
+</body>
+</html>
