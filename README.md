@@ -1,258 +1,27 @@
-# Malla-obstetricia-u-Aysen
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Interactiva - Obstetricia</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Malla Interactiva - Obstetricia</h1>
-  <div class="grid">
-        <div class="ramo" data-id="fundamentos_profesion" data-depends="salud1">
-      <input type="checkbox" id="fundamentos_profesion" />
-      <label for="fundamentos_profesion">Fundamentos disciplinarios de la profesión</label>
-    </div>
+# 🩺 Malla Interactiva - Obstetricia
 
-    <div class="ramo" data-id="quimica_bioquimica" data-depends="biologia,fisiologia">
-      <input type="checkbox" id="quimica_bioquimica" />
-      <label for="quimica_bioquimica">Química y bioquímica</label>
-    </div>
+Este es un proyecto de malla curricular interactiva para la carrera de Obstetricia.
 
-    <div class="ramo" data-id="anatomia" data-depends="salud1,fisiologia">
-      <input type="checkbox" id="anatomia" />
-      <label for="anatomia">Anatomía</label>
-    </div>
+- Puedes marcar los ramos que ya aprobaste.
+- Al marcar un ramo, se desbloquean los que dependen de él.
+- Está construido con HTML, CSS y JavaScript puro (sin frameworks).
 
-    <div class="ramo" data-id="sociocultural" data-depends="educacion">
-      <input type="checkbox" id="sociocultural" />
-      <label for="sociocultural">Fundamentos socioculturales de la salud</label>
-    </div>
+## 🚀 ¿Cómo ver la malla?
 
-    <div class="ramo" data-id="formacion1" data-depends="formacion2">
-      <input type="checkbox" id="formacion1" />
-      <label for="formacion1">Formación fundamental I</label>
-    </div>
+Abre el sitio en GitHub Pages:
 
-    <div class="ramo" data-id="informatica" data-depends="">
-      <input type="checkbox" id="informatica" />
-      <label for="informatica">Herramientas informáticas</label>
-    </div>
+🔗 https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/
 
-    <div class="ramo" data-id="salud1" data-depends="salud2">
-      <input type="checkbox" id="salud1" />
-      <label for="salud1">Salud de la mujer y recién nacido I</label>
-    </div>
+> Si no carga, asegúrate de tener el archivo `.nojekyll` y que GitHub Pages esté activado desde la rama `main`.
 
-    <div class="ramo" data-id="biologia" data-depends="fisiopato,inmunologia">
-      <input type="checkbox" id="biologia" />
-      <label for="biologia">Biología celular y genética</label>
-    </div>
+## 📁 Archivos principales
 
-    <div class="ramo" data-id="fisiologia" data-depends="salud2,fisiopato,inmunologia">
-      <input type="checkbox" id="fisiologia" />
-      <label for="fisiologia">Fisiología general y de sistemas</label>
-    </div>
+- `index.html`: contiene toda la estructura de la malla y los ramos.
+- `style.css`: diseño en rojo.
+- `script.js`: lógica de desbloqueo de ramos.
+- `.nojekyll`: desactiva Jekyll para que GitHub Pages funcione con HTML puro.
 
-    <div class="ramo" data-id="histologia" data-depends="salud2">
-      <input type="checkbox" id="histologia" />
-      <label for="histologia">Histología</label>
-    </div>
+## ✏️ Autor
 
-    <div class="ramo" data-id="formacion2" data-depends="formacion3">
-      <input type="checkbox" id="formacion2" />
-      <label for="formacion2">Formación fundamental II</label>
-    </div>
-
-    <div class="ramo" data-id="salud2" data-depends="salud3">
-      <input type="checkbox" id="salud2" />
-      <label for="salud2">Salud de la mujer y recién nacido II</label>
-    </div>
-
-    <div class="ramo" data-id="inmunologia" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="inmunologia" />
-      <label for="inmunologia">Inmunología y agentes vivos</label>
-    </div>
-
-    <div class="ramo" data-id="fisiopato" data-depends="salud3,farmacologia">
-      <input type="checkbox" id="fisiopato" />
-      <label for="fisiopato">Fisiopatología</label>
-    </div>
-
-    <div class="ramo" data-id="psicologia" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="psicologia" />
-      <label for="psicologia">Psicología general y del desarrollo</label>
-    </div>
-
-    <div class="ramo" data-id="ingles1" data-depends="ingles2">
-      <input type="checkbox" id="ingles1" />
-      <label for="ingles1">Inglés I</label>
-    </div>
-
-    <div class="ramo" data-id="salud3" data-depends="clinica1">
-      <input type="checkbox" id="salud3" />
-      <label for="salud3">Salud de la mujer y recién nacido III</label>
-    </div>
-
-    <div class="ramo" data-id="educacion" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="educacion" />
-      <label for="educacion">Educación para la salud e interculturalidad</label>
-    </div>
-
-    <div class="ramo" data-id="farmacologia" data-depends="clinica1">
-      <input type="checkbox" id="farmacologia" />
-      <label for="farmacologia">Farmacología</label>
-    </div>
-
-    <div class="ramo" data-id="salud_pub1" data-depends="gestion1,salud_pub2">
-      <input type="checkbox" id="salud_pub1" />
-      <label for="salud_pub1">Salud pública y epidemiología I</label>
-    </div>
-        <div class="ramo" data-id="ingles2" data-depends="ingles3">
-      <input type="checkbox" id="ingles2" />
-      <label for="ingles2">Inglés II</label>
-    </div>
-
-    <div class="ramo" data-id="clinica1" data-depends="salud4">
-      <input type="checkbox" id="clinica1" />
-      <label for="clinica1">Clínica salud de la mujer y RN I</label>
-    </div>
-
-    <div class="ramo" data-id="gestion1" data-depends="gestion2">
-      <input type="checkbox" id="gestion1" />
-      <label for="gestion1">Gestión y liderazgo en salud I</label>
-    </div>
-
-    <div class="ramo" data-id="salud_pub2" data-depends="investigacion1">
-      <input type="checkbox" id="salud_pub2" />
-      <label for="salud_pub2">Salud pública y epidemiología II</label>
-    </div>
-
-    <div class="ramo" data-id="electivo1" data-depends="">
-      <input type="checkbox" id="electivo1" />
-      <label for="electivo1">Electivo I</label>
-    </div>
-
-    <div class="ramo" data-id="ingles3" data-depends="ingles4">
-      <input type="checkbox" id="ingles3" />
-      <label for="ingles3">Inglés III</label>
-    </div>
-
-    <div class="ramo" data-id="salud4" data-depends="salud5">
-      <input type="checkbox" id="salud4" />
-      <label for="salud4">Salud de la mujer y RN IV</label>
-    </div>
-
-    <div class="ramo" data-id="gestion2" data-depends="gestion3">
-      <input type="checkbox" id="gestion2" />
-      <label for="gestion2">Gestión y liderazgo en salud II</label>
-    </div>
-
-    <div class="ramo" data-id="investigacion1" data-depends="investigacion2">
-      <input type="checkbox" id="investigacion1" />
-      <label for="investigacion1">Investigación en salud I</label>
-    </div>
-
-    <div class="ramo" data-id="ingles4" data-depends="">
-      <input type="checkbox" id="ingles4" />
-      <label for="ingles4">Inglés IV</label>
-    </div>
-
-    <div class="ramo" data-id="salud5" data-depends="clinica2,clinica3">
-      <input type="checkbox" id="salud5" />
-      <label for="salud5">Salud de la mujer y RN V</label>
-    </div>
-
-    <div class="ramo" data-id="gestion3" data-depends="formulacion,clinica2,clinica3">
-      <input type="checkbox" id="gestion3" />
-      <label for="gestion3">Gestión y liderazgo en salud III</label>
-    </div>
-
-    <div class="ramo" data-id="investigacion2" data-depends="formulacion">
-      <input type="checkbox" id="investigacion2" />
-      <label for="investigacion2">Investigación en salud II</label>
-    </div>
-
-    <div class="ramo" data-id="bioetica" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="bioetica" />
-      <label for="bioetica">Bioética clínica</label>
-    </div>
-
-    <div class="ramo" data-id="formacion3" data-depends="formacion4">
-      <input type="checkbox" id="formacion3" />
-      <label for="formacion3">Formación fundamental III</label>
-    </div>
-
-    <div class="ramo" data-id="electivo2" data-depends="">
-      <input type="checkbox" id="electivo2" />
-      <label for="electivo2">Electivo II</label>
-    </div>
-
-    <div class="ramo" data-id="clinica2" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="clinica2" />
-      <label for="clinica2">Clínica salud mujer y RN II: APS</label>
-    </div>
-
-    <div class="ramo" data-id="clinica3" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="clinica3" />
-      <label for="clinica3">Clínica salud mujer y RN III: Intrahosp.</label>
-    </div>
-
-    <div class="ramo" data-id="formulacion" data-depends="internado_ob1,internado_ob2,internado_aps1,internado_aps2,internado_gin1,internado_gin2,internado_neo1,internado_neo2">
-      <input type="checkbox" id="formulacion" />
-      <label for="formulacion">Formulación y evaluación de proyectos</label>
-    </div>
-        <div class="ramo" data-id="electivo3" data-depends="">
-      <input type="checkbox" id="electivo3" />
-      <label for="electivo3">Electivo III</label>
-    </div>
-
-    <div class="ramo" data-id="formacion4" data-depends="">
-      <input type="checkbox" id="formacion4" />
-      <label for="formacion4">Formación fundamental IV</label>
-    </div>
-
-    <div class="ramo" data-id="internado_ob1" data-depends="internado_ob2">
-      <input type="checkbox" id="internado_ob1" />
-      <label for="internado_ob1">Internado Obstetricia I</label>
-    </div>
-
-    <div class="ramo" data-id="internado_aps1" data-depends="internado_aps2">
-      <input type="checkbox" id="internado_aps1" />
-      <label for="internado_aps1">Internado APS I</label>
-    </div>
-
-    <div class="ramo" data-id="internado_gin1" data-depends="internado_gin2">
-      <input type="checkbox" id="internado_gin1" />
-      <label for="internado_gin1">Internado Ginecología I</label>
-    </div>
-
-    <div class="ramo" data-id="internado_neo1" data-depends="internado_neo2">
-      <input type="checkbox" id="internado_neo1" />
-      <label for="internado_neo1">Internado Neonatología I</label>
-    </div>
-
-    <div class="ramo" data-id="internado_ob2" data-depends="">
-      <input type="checkbox" id="internado_ob2" />
-      <label for="internado_ob2">Internado Obstetricia II</label>
-    </div>
-
-    <div class="ramo" data-id="internado_aps2" data-depends="">
-      <input type="checkbox" id="internado_aps2" />
-      <label for="internado_aps2">Internado APS II</label>
-    </div>
-
-    <div class="ramo" data-id="internado_gin2" data-depends="">
-      <input type="checkbox" id="internado_gin2" />
-      <label for="internado_gin2">Internado Ginecología II</label>
-    </div>
-
-    <div class="ramo" data-id="internado_neo2" data-depends="">
-      <input type="checkbox" id="internado_neo2" />
-      <label for="internado_neo2">Internado Neonatología II</label>
-    </div>
-      </div>
-  <script src="script.js"></script>
-</body>
-</html>
+Creado por [Franshesca Haro].  
+Este proyecto puede adaptarse para otras carreras si lo necesitas.
